@@ -2,7 +2,7 @@
 
 ![Catan LLM Benchmark preview](assets/preview.svg)
 
-Text-only Catan benchmark harness for testing how language models pick legal game actions from compact simulator state.
+Text-only Catan benchmark harness for seeing how language models choose legal actions inside a real board-game simulator, with full JSONL traces instead of hand-wavy eval summaries.
 
 ## At a glance
 
@@ -20,6 +20,12 @@ Most LLM benchmark harnesses measure static tasks. This one measures sequential 
 - provider reliability and fallback behavior
 - repeated strategy differences over full games
 - batch collection against a fixed family of sampled states
+
+## Verified on 2026-06-20
+
+- `python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt`
+- `.venv/bin/python bench.py --mode fake --games 2 --max-actions 80 --vps 6 --seed 42`
+- `.venv/bin/python batch_collect.py --help`
 
 ## Setup
 

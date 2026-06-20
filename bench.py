@@ -156,7 +156,7 @@ def hf_token_source() -> tuple[str | None, str | None]:
         if path.exists():
             cached = path.read_text(encoding="utf-8", errors="ignore").strip()
             if cached:
-                return cached, str(path)
+                return cached, "cache:huggingface"
     return None, None
 
 

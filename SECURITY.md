@@ -12,6 +12,7 @@ This public extraction was reviewed to avoid shipping:
 The repo intentionally mentions these generic names in code and docs:
 
 - `HF_TOKEN`
+- `cache:huggingface`
 - `https://router.huggingface.co/v1`
 - model slugs such as `zai-org/GLM-5.2:fireworks-ai`
 
